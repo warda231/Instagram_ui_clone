@@ -8,13 +8,25 @@ class Account extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: Text(""),
-        flexibleSpace: Image(
-          image: NetworkImage(
-              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjtjBw4xwF01ZdKL1cmnYZD3vdavlQPOWA7w&usqp=CAU"),
-          height: 120,
-          width: 120,
-          fit: BoxFit.contain,
+        title: Row(
+          children: [
+            Icon(
+              Icons.lock,
+              color: Colors.black,
+            ),
+            Text(
+              'Username',
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            Icon(
+              Icons.arrow_drop_down_sharp,
+              color: Colors.black,
+            ),
+          ],
         ),
         actions: [
           IconButton(

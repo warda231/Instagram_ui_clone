@@ -44,7 +44,7 @@ class FeedPage extends StatelessWidget {
                 ],
               ),
               SizedBox(
-                height: 7,
+                height: 10,
               ),
               Container(
                 padding: EdgeInsets.symmetric(
@@ -65,9 +65,11 @@ class FeedPage extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              "username",
+                              "Username",
                               style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 15),
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 18,
+                                  color: Colors.black),
                             ),
                           ],
                         ),
@@ -108,6 +110,9 @@ class FeedPage extends StatelessWidget {
                     ),
                   ],
                 ),
+              ),
+              SizedBox(
+                height: 10,
               ),
               SizedBox(
                 width: double.infinity,

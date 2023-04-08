@@ -41,9 +41,12 @@ class bubbleStories extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
+      
       padding: EdgeInsets.all(8),
       child: Row(
+        
         children: [
+          
           Container(
             width: 60,
             height: 60,
@@ -77,6 +80,7 @@ class bubbleStories extends StatelessWidget {
             width: 10,
           ),
           Container(
+            
             width: 60,
             height: 60,
             decoration: BoxDecoration(
