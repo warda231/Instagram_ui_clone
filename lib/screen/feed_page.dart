@@ -81,19 +81,23 @@ class FeedPage extends StatelessWidget {
                           context: context,
                           builder: (context) {
                             return Dialog(
+                              shape: RoundedRectangleBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(10)),
+                              ),
+                              insetPadding:
+                                  EdgeInsets.only(left: 150, right: 150),
                               child: ListView(
                                 shrinkWrap: true,
-                                padding: EdgeInsets.symmetric(vertical: 16),
-                                children: [
-                                  "Delete",
-                                ]
+                                padding: EdgeInsets.symmetric(vertical: 5),
+                                children: ["Delete", "Edit"]
                                     .map(
                                       (e) => InkWell(
                                         onTap: () {},
                                         child: Container(
                                           padding: EdgeInsets.symmetric(
                                               vertical: 12, horizontal: 16),
-                                          child: Text(e),
+                                          child: Center(child: Text(e)),
                                         ),
                                       ),
                                     )
