@@ -1,7 +1,11 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
+import '../Providers/fav_item.dart';
+import '../Providers/liked_widget_consumer.dart';
+import '../Providers/theme_provider.dart';
 import '../utils/colors.dart';
 import '../widgets/stories_code.dart';
 
@@ -10,6 +14,11 @@ class FeedPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final themeChanger = Provider.of<themePro>(context, listen: false);
+
+    var index = 0;
+    List<int> selecteditem = [];
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
@@ -22,6 +31,7 @@ class FeedPage extends StatelessWidget {
           fit: BoxFit.contain,
         ),
         actions: [
+          
           IconButton(
             onPressed: () {},
             icon: Icon(
@@ -29,6 +39,7 @@ class FeedPage extends StatelessWidget {
               color: Colors.black,
             ),
           ),
+
         ],
       ),
       body: SingleChildScrollView(
@@ -41,6 +52,7 @@ class FeedPage extends StatelessWidget {
               Row(
                 children: [
                   bubbleStories(),
+                  
                 ],
               ),
               SizedBox(
@@ -128,13 +140,7 @@ class FeedPage extends StatelessWidget {
               ),
               Row(
                 children: [
-                  IconButton(
-                    onPressed: () {},
-                    icon: Icon(
-                      Icons.favorite,
-                      color: Colors.red,
-                    ),
-                  ),
+                  liked_provider_widget(index: index),
                   IconButton(
                     onPressed: () {},
                     icon: Icon(
@@ -312,12 +318,8 @@ class FeedPage extends StatelessWidget {
               ),
               Row(
                 children: [
-                  IconButton(
-                    onPressed: () {},
-                    icon: Icon(
-                      Icons.favorite,
-                      color: Colors.red,
-                    ),
+                  liked_provider_widget(
+                    index: index,
                   ),
                   IconButton(
                     onPressed: () {},
